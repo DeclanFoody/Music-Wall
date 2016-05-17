@@ -1,0 +1,11 @@
+<h1>All Songs<h1>
+Check out some choones
+<% @songs.each do |song| %>
+  <div class="song">
+<h3>Track: <%= song.name %> <small> artist: <%=song.artist%></small></h3>
+  <p>
+ Likes: <%= song.likes %>
+  </p>
+  </div>
+<% end %>
+<a href="/songs/new">What are you jammmin to?</a>
