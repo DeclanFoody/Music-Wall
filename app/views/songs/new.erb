@@ -1,5 +1,4 @@
 <h1>Give us a song recommendation</h1>
-
 <form method="post" action="/songs">
   <div>
     <label>Artist:</label>
@@ -10,10 +9,20 @@
     <input type="text" name="name">
   </div>
   <div>
-    <label>likes:</label>
-    <input type="integer" name="likes">
+    <label>Album:</label>
+    <input type="text" name="album">
   </div>
   <div>
     <input type="submit" value="Submit">
   </div>
 </form>
+<% if @message && @message.errors.any? %>
+  <div>
+    <strong> Learn to type. Sort your life out!!</strong>
+    <ul>
+      <% @message.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

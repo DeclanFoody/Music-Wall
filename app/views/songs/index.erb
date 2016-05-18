@@ -1,11 +1,8 @@
-<h1>All Songs<h1>
-Check out some choones
+<h1><strong>Music Wall</strong><h1>
+<h2>Check out some tunez</h2>
+<a href="/songs/new">What are you jammin to?</a>
 <% @songs.each do |song| %>
   <div class="song">
-<h3>Track: <%= song.name %> <small> artist: <%=song.artist%></small></h3>
-  <p>
- Likes: <%= song.likes %>
-  </p>
+<h4><small> track:</small> <%=song.name%> <small> artist: <%=song.artist%></small> <small> album: <%= song.album %></small></h4>
   </div>
 <% end %>
-<a href="/songs/new">What are you jammmin to?</a>
